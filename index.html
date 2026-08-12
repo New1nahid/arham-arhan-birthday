@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 1st Birthday, Arhan-Arham ❤️</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:system-ui,-apple-system,Segoe UI,sans-serif}
+body{
+  overflow-x:hidden;
+  color:#fff;
+  background:radial-gradient(circle at 50% 20%,#ffd6e7 0,#9d5cff 32%,#26134d 72%,#080515 100%);
+}
+#stars{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.star{position:absolute;width:3px;height:3px;background:#fff;border-radius:50%;opacity:.7;animation:twinkle 2.5s infinite ease-in-out}
+@keyframes twinkle{50%{opacity:.15;transform:scale(.5)}}
+.container{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px 16px;position:relative}
+.card{
+ width:min(760px,94vw);padding:34px 22px 30px;text-align:center;
+ border:1px solid rgba(255,255,255,.25);border-radius:30px;
+ background:rgba(20,10,45,.48);backdrop-filter:blur(15px);
+ box-shadow:0 25px 80px rgba(0,0,0,.45);position:relative;z-index:2;
+}
+.badge{display:inline-block;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.12);font-size:13px;letter-spacing:2px}
+h1{font-size:clamp(34px,9vw,70px);margin:18px 0 8px;line-height:1.02}
+.gradient{background:linear-gradient(90deg,#fff,#ffd1e8,#ffeaa7,#fff);-webkit-background-clip:text;color:transparent}
+.subtitle{font-size:17px;opacity:.9}
+.cake{font-size:90px;margin:18px 0;filter:drop-shadow(0 10px 20px rgba(255,150,220,.35));animation:float 3s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+button{
+ border:0;border-radius:999px;padding:14px 22px;font-weight:800;font-size:15px;
+ cursor:pointer;color:#3a164d;background:linear-gradient(135deg,#fff,#ffd0e5);
+ box-shadow:0 10px 25px rgba(0,0,0,.25);transition:.2s
+}
+button:hover{transform:translateY(-2px) scale(1.02)}
+#letter{display:none;margin-top:25px;text-align:left;animation:reveal .8s ease}
+@keyframes reveal{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.letter{
+ padding:24px;border-radius:22px;background:rgba(255,255,255,.09);
+ border:1px solid rgba(255,255,255,.16);line-height:1.8;font-size:16px
+}
+.letter h2{text-align:center;margin-top:0}
+.highlight{color:#ffd3e8;font-weight:800}
+.signature{text-align:right;font-weight:800;color:#ffd3e8;margin-top:20px}
+#surprise{display:none;margin-top:20px;font-size:25px;font-weight:900;animation:pop .7s ease}
+@keyframes pop{0%{transform:scale(.2);opacity:0}70%{transform:scale(1.1)}100%{transform:scale(1);opacity:1}}
+.confetti{position:fixed;top:-20px;width:9px;height:16px;z-index:10;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:.9}}
+.footer{margin-top:22px;font-size:12px;opacity:.6}
+</style>
+</head>
+<body>
+<div id="stars"></div>
+
+<div class="container">
+  <main class="card">
+    <div class="badge">12 • AUGUST • 2025</div>
+    <div class="cake">🎂</div>
+    <h1 class="gradient">Happy 1st Birthday,<br>Arhan-Arham ❤️</h1>
+    <p class="subtitle">A tiny celebration for one very special little soul. 🧸✨</p>
+
+    <button id="openBtn" onclick="openLetter()">🎁 Tap to Open Your Surprise</button>
+
+    <section id="letter">
+      <div class="letter">
+        <h2>Dear Arhan-Arham ❤️</h2>
+
+        <p>Today is not just another day.</p>
+
+        <p>
+          Today is the day <span class="highlight">someone incredibly special</span>
+          came into this world. ✨
+        </p>
+
+        <p>
+          And today, I just want to say...
+          <strong>Happy 1st Birthday! 🎂🎈</strong>
+        </p>
+
+        <p>
+          I hope your 1st year is filled with beautiful memories, genuine smiles,
+          success, dreams coming true, and countless reasons to be happy. 🎈🎈
+        </p>
+
+        <p>
+          You deserve every beautiful thing life has to offer.
+        </p>
+
+        <p>
+          Never stop smiling. Never stop dreaming.
+          And never forget how special you are. 🪄🧸
+        </p>
+
+        <p style="text-align:center;font-size:24px">
+          🌟 🧸 🎀 🎂 🎈 🪄 ❤️
+        </p>
+
+        <p style="text-align:center;font-weight:800">
+          Once again...<br>
+          Happy 1st Birthday, Arhan-Arham! 🎀🎂
+        </p>
+
+        <p class="signature">— Mahbub ❤️</p>
+      </div>
+
+      <div id="surprise">🎉 ONE YEAR OF CUTENESS! 🎉</div>
+    </section>
+
+    <div class="footer">Made with ❤️ especially for Arhan-Arham</div>
+  </main>
+</div>
+
+<script>
+const stars=document.getElementById("stars");
+for(let i=0;i<90;i++){
+  const s=document.createElement("span");
+  s.className="star";
+  s.style.left=Math.random()*100+"%";
+  s.style.top=Math.random()*100+"%";
+  s.style.animationDelay=(Math.random()*3)+"s";
+  s.style.opacity=(.2+Math.random()*.8);
+  stars.appendChild(s);
+}
+
+function openLetter(){
+  document.getElementById("letter").style.display="block";
+  document.getElementById("openBtn").style.display="none";
+  document.getElementById("surprise").style.display="block";
+  confetti();
+}
+
+function confetti(){
+  const symbols=["🎈","🎉","✨","💖","🎀","⭐","🧸"];
+  for(let i=0;i<75;i++){
+    const c=document.createElement("div");
+    c.className="confetti";
+    c.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    c.style.left=Math.random()*100+"vw";
+    c.style.fontSize=(14+Math.random()*18)+"px";
+    c.style.animationDuration=(3+Math.random()*4)+"s";
+    c.style.animationDelay=(Math.random()*1.5)+"s";
+    document.body.appendChild(c);
+    setTimeout(()=>c.remove(),8000);
+  }
+}
+</script>
+</body>
+</html>
